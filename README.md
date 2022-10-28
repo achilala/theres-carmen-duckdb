@@ -52,46 +52,6 @@ dbt docs serve
 locally
 > [http://localhost:8080](http://localhost:8080)
 
-or hosted on Netlify
-> [Carmen Sightings dbt docs](https://carmen-sightings-dbt-docs.netlify.app)
-
-![img.png](docs/dbt_docs.PNG)
-
-
-## How-to Explore the built Schemas and Data
-Chose PostgreSQL (since that's what you use) as the database of choice, and included PGAdmin for a better UX exploring the models
-> [http://localhost:80](http://localhost:80)
-
-Login
-```
-Email Address / Username: Aka.Chilala@gmail.com
-Password: i<30p3n50urc3
-```
-![img.png](docs/pgadmin4_login.PNG)
-
-Register the server as follows:
-
-General
-```
-Name: interpol_dwh
-```
-![img.png](docs/pgadmin4_register_server_general.PNG)
-
-Connection
-```
-Host name/address: interpol_dwh
-Username: interpol_user
-Password: i<30p3n50urc3
-```
-![img.png](docs/pgadmin4_register_server_connection.PNG)
-
-There's a `.env` config file in the root folder of this project that contains all the project environment variables
-
-## ERD
-This is the ER diagram of the Kimbal dimensional model
-
-![img.png](docs/erd.PNG)
-
 ## Analytics
 
 * A bit of house keeping
