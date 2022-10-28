@@ -1,0 +1,8 @@
+Interpol:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: './interpol_db.duckdb'
+      schema: ""
+      threads: 10
