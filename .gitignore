@@ -1,8 +1,10 @@
 target/
 dbt_packages/
 logs/
+py3-env/
 
 interpol_db.duckdb
+seeds/*.csv
 .DS_store
 .env
 .user.yml
