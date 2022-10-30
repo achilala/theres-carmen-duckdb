@@ -13,16 +13,12 @@ git clone https://github.com/achilala/theres-carmen-duckdb.git
 cd theres-carmen-duckdb
 ```
 
-## How-to Start-up the Environment
-To bring up the docker containers and generate dbt seed files:
-```ps
-docker-compose up --detach
-```
-Once the Python container is up and running it will execute the python code and generate the `seed` files about 5 secs after.
-
-Execute the `setup.sh` file to configure a dbt `alias` of the `docker run` command:
+## How-to Setup the Environment
+Execute the `setup.sh` file to create a python virtual environment and install the necessary dependencies:
 ```ps
 ./setup.sh
+
+source py3-env/bin/activate
 ```
 
 Generate dbt `seed` files from the excel file by executing `convert_excel_workbook_to_csv_files.py` from the cli:
@@ -39,13 +35,11 @@ To build the dbt models and generate the dbt catalogue `execute` this batch file
 or invoke the commands from the `bash` cli:
 
 ```ps
-source ~/.bash_aliases
-
-dbt clean
-dbt deps
-dbt build
-dbt docs generate
-dbt docs serve
+dbt clean --profiles .
+dbt deps --profiles .
+dbt build --profiles .
+dbt docs generate --profiles .
+dbt docs serve --profiles .
 ```
 
 ## Where-to Find the generate dbt Docs
